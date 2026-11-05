@@ -39,8 +39,8 @@ h1{font:700 clamp(52px,9vw,88px)/1.02 var(--hand);letter-spacing:-.02em;margin:0
 }
 
 .list{list-style:none;margin:0;padding:0;display:grid;gap:22px;position:relative}
-.item{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:18px;align-items:center;
-  padding:24px 30px 26px;color:var(--ink,var(--pen));text-decoration:none;isolation:isolate;
+.item{position:relative;display:grid;grid-template-columns:300px minmax(0,1fr) 44px;gap:18px;align-items:center;
+  padding:22px 26px 22px 22px;color:var(--ink,var(--pen));text-decoration:none;isolation:isolate;
   transition:transform .15s ease}
 .item::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--bg,var(--sheet));
   border:4px solid var(--pen);border-radius:10px;filter:url(#wob)}
@@ -48,9 +48,10 @@ h1{font:700 clamp(52px,9vw,88px)/1.02 var(--hand);letter-spacing:-.02em;margin:0
 .list li:nth-child(even) .item{transform:rotate(.5deg)}
 .list li .item:hover,.list li .item:focus-visible{transform:rotate(0) translateY(-3px)}
 .item:focus-visible{outline:4px solid var(--pen);outline-offset:6px}
+.thumb{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;border:4px solid var(--pen);border-radius:6px;background:var(--sheet)}
 .item h2{font:700 clamp(38px,6vw,52px)/1.05 var(--hand);margin:0 0 4px}
 .item .line{font:700 22px/1.25 var(--hand);margin:0 0 10px}
-.item .about{margin:0 0 8px;max-width:58ch}
+.item .about{margin:0 0 8px}
 .item .tech{margin:0;font-size:14px;opacity:.82}
 .item svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
 
@@ -65,7 +66,8 @@ footer a:focus-visible{outline:3px solid var(--pen);outline-offset:3px}
   .top svg{position:absolute;right:0;top:26px;width:116px;margin:0}
   h1{font-size:clamp(42px,12.6vw,64px);padding-bottom:22px}
   .id{margin-bottom:12px}
-  .item{grid-template-columns:minmax(0,1fr) 30px;gap:10px;padding:20px 20px 22px}
+  .item{grid-template-columns:minmax(0,1fr) 30px;gap:12px 10px;padding:14px 16px 20px 14px}
+  .thumb{grid-column:1/-1}
   .item svg{width:30px;height:30px}
 }
 </style>
@@ -112,6 +114,16 @@ for (const p of window.PROJECTS) {
   a.href = p.url;
   a.style.setProperty("--bg", p.color);
   a.style.setProperty("--ink", p.ink);
+  if (p.thumb) {
+    const img = document.createElement("img");
+    img.className = "thumb";
+    img.src = p.thumb;
+    img.alt = p.name + " 화면";
+    img.width = 800;
+    img.height = 500;
+    img.loading = "lazy";
+    a.append(img);
+  }
   const text = document.createElement("div");
   for (const [tag, cls, value] of [["h2", "", p.name], ["p", "line", p.line], ["p", "about", p.about], ["p", "tech", p.tech]]) {
     if (!value) continue;
