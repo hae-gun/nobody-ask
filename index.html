@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>nobody_ask</title>
+<meta name="description" content="아무도 안 물어봤지만 만들었습니다. 직접 만든 서비스를 모아 둔 곳입니다.">
+<meta property="og:title" content="nobody_ask">
+<meta property="og:description" content="아무도 안 물어봤지만 만들었습니다.">
+<meta property="og:image" content="https://hae-gun.github.io/nobody-ask/assets/profile.png">
+<link rel="icon" href="assets/profile-small.png">
+<link rel="apple-touch-icon" href="assets/profile-small.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&family=Gowun+Dodum&display=swap">
+<style>
+/* 콘셉트: 크레용으로 칠한 노란 종이에 손으로 그린 사람이 아무도 안 부르는데 혼자 손을 들고 있다 */
+:root{
+  color-scheme:light;
+  --paper:#ffd84d; --pen:#1c1c1c; --sheet:#fff8df;
+  --hand:"Gaegu","Apple SD Gothic Neo","Malgun Gothic",cursive;
+  --body:"Gowun Dodum","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+}
+*{box-sizing:border-box}
+html{background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--pen);font:400 17px/1.65 var(--body);word-break:keep-all;overflow-wrap:break-word}
+a{color:inherit}
+.defs{position:absolute;width:0;height:0}
+main{max-width:940px;margin:auto;padding:28px 24px 40px}
+
+.top{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:12px;align-items:end;min-height:372px}
+.top svg{display:block;width:100%;height:auto;margin-bottom:-6px;position:relative;z-index:1}
+.id{font:700 22px/1 var(--hand);margin:0 0 20px}
+h1{font:700 clamp(52px,9vw,88px)/1.02 var(--hand);letter-spacing:-.02em;margin:0;padding-bottom:30px;text-wrap:balance}
+#arm{transform-origin:792px 600px}
+@media (prefers-reduced-motion:no-preference){
+  #arm{animation:wave 1.1s ease-in-out .5s 3 alternate}
+  @keyframes wave{to{transform:rotate(9deg)}}
+}
+
+.list{list-style:none;margin:0;padding:0;display:grid;gap:22px;position:relative}
+.item{position:relative;display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:18px;align-items:center;
+  padding:24px 30px 26px;color:var(--ink,var(--pen));text-decoration:none;isolation:isolate;
+  transition:transform .15s ease}
+.item::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--bg,var(--sheet));
+  border:4px solid var(--pen);border-radius:10px;filter:url(#wob)}
+.list li:nth-child(odd) .item{transform:rotate(-.6deg)}
+.list li:nth-child(even) .item{transform:rotate(.5deg)}
+.list li .item:hover,.list li .item:focus-visible{transform:rotate(0) translateY(-3px)}
+.item:focus-visible{outline:4px solid var(--pen);outline-offset:6px}
+.item h2{font:700 clamp(38px,6vw,52px)/1.05 var(--hand);margin:0 0 4px}
+.item .line{font:700 22px/1.25 var(--hand);margin:0 0 10px}
+.item .about{margin:0 0 8px;max-width:58ch}
+.item .tech{margin:0;font-size:14px;opacity:.82}
+.item svg{width:44px;height:44px;fill:none;stroke:currentColor;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+
+.next{font:700 24px/1.3 var(--hand);text-align:center;padding:20px 16px;border:4px dashed var(--pen);border-radius:10px;margin:0}
+footer{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:36px;font-size:15px}
+footer a{text-underline-offset:3px}
+footer a:focus-visible{outline:3px solid var(--pen);outline-offset:3px}
+
+@media (max-width:680px){
+  main{padding:20px 16px 28px}
+  .top{display:block;position:relative;min-height:0}
+  .top svg{position:absolute;right:0;top:26px;width:116px;margin:0}
+  h1{font-size:clamp(42px,12.6vw,64px);padding-bottom:22px}
+  .id{margin-bottom:12px}
+  .item{grid-template-columns:minmax(0,1fr) 30px;gap:10px;padding:20px 20px 22px}
+  .item svg{width:30px;height:30px}
+}
+</style>
+</head>
+<body>
+<svg class="defs" aria-hidden="true"><filter id="wob" x="-3%" y="-6%" width="106%" height="112%"><feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter><filter id="draw" x="-12%" y="-12%" width="124%" height="124%"><feTurbulence type="fractalNoise" baseFrequency="0.016" numOctaves="2" seed="7"/><feDisplacementMap in="SourceGraphic" scale="9"/></filter></svg>
+<main>
+  <header class="top">
+    <div>
+      <p class="id">nobody_ask</p>
+      <h1>아무도 안<br>물어봤지만<br>만들었습니다</h1>
+    </div>
+    <svg viewBox="130 130 860 780" role="img" aria-label="아무도 안 물어봤는데 혼자 손을 들고 있는 사람 낙서">
+      <g filter="url(#draw)" fill="none" stroke="#1c1c1c" stroke-width="20" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M300 300C400 170 660 170 770 300C860 420 840 620 720 700C590 780 380 770 290 660C210 560 225 400 306 292" fill="#fff8df"/>
+        <circle cx="440" cy="440" r="17" fill="#1c1c1c"/>
+        <circle cx="640" cy="432" r="22" fill="#1c1c1c"/>
+        <path d="M480 570L610 562"/>
+        <g id="arm"><path d="M792 600C860 520 890 420 900 260"/><path d="M900 260L872 180M900 260L902 165M900 260L935 178"/></g>
+        <path d="M420 745C400 800 397 860 398 930"/>
+        <path d="M660 745C680 800 688 860 686 930"/>
+        <path d="M415 800C340 850 300 880 285 925"/>
+        <path d="M150 215C160 160 245 160 245 220C245 265 195 265 195 315" stroke-width="16"/>
+        <circle cx="195" cy="365" r="9" fill="#1c1c1c" stroke-width="8"/>
+      </g>
+    </svg>
+  </header>
+
+  <ul class="list" id="list"></ul>
+  <p class="next" style="margin-top:22px">다음 것도 아무도 안 시켰는데 만드는 중입니다</p>
+
+  <footer>
+    <span>최혜근이 혼자 만듭니다</span>
+    <a href="https://github.com/hae-gun">GitHub</a>
+  </footer>
+</main>
+<script src="projects.js"></script>
+<script>
+const list = document.getElementById("list");
+for (const p of window.PROJECTS) {
+  const li = document.createElement("li");
+  const a = document.createElement("a");
+  a.className = "item";
+  a.href = p.url;
+  a.style.setProperty("--bg", p.color);
+  a.style.setProperty("--ink", p.ink);
+  const text = document.createElement("div");
+  for (const [tag, cls, value] of [["h2", "", p.name], ["p", "line", p.line], ["p", "about", p.about], ["p", "tech", p.tech]]) {
+    if (!value) continue;
+    const el = document.createElement(tag);
+    if (cls) el.className = cls;
+    el.textContent = value;
+    text.append(el);
+  }
+  a.append(text);
+  a.insertAdjacentHTML("beforeend", '<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M8 34C24 31 40 32 56 31M38 13C44 20 50 26 57 31C50 37 44 44 39 52"/></svg>');
+  li.append(a);
+  list.append(li);
+}
+</script>
+</body>
+</html>
