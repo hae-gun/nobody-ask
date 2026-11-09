@@ -2,6 +2,16 @@
 // links: 제목을 여러 링크로 나눌 때(" / "로 이어짐), thumb: 800x500 화면 이미지, color: 칸 배경색, ink: 글자색, tech: 쓴 기술
 window.PROJECTS = [
   {
+    name: "앵파크",
+    url: "https://anglog.nobody-asked.dev/",
+    thumb: "assets/angpark.jpg",
+    line: "오늘은 앵무새가 되어 놉니다.",
+    about: "단풍이 우거진 가을 공원에서 앵무새가 되어 날고 짹짹거립니다. 로그인 없이 바로 놀 수 있고, 다른 앵무네 집에도 놀러 갈 수 있습니다.",
+    tech: "Java Spring, WebSocket, Three.js",
+    color: "#f5a03a",
+    ink: "#1c1c1c"
+  },
+  {
     name: "매직 위즈파크 / 라이온즈파크",
     url: "https://wiz.gohaeyaji.com/#kt",
     links: [
