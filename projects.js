@@ -2,6 +2,16 @@
 // links: 제목을 여러 링크로 나눌 때(" / "로 이어짐), thumb: 800x500 화면 이미지, color: 칸 배경색, ink: 글자색, tech: 쓴 기술
 window.PROJECTS = [
   {
+    name: "몇 대 몇?",
+    url: "https://whose-fault.nobody-asked.dev/",
+    thumb: "assets/whose-fault.jpg",
+    line: "이 사고, 과실은 몇 대 몇일까요?",
+    about: "자동차 사고 장면을 보고 과실비율을 맞혀 봅니다. 두 차의 경로를 직접 그려 사고를 만들고, 사람들이 올린 사고에 투표하며 댓글로 토론할 수 있습니다.",
+    tech: "Java Spring, JavaScript",
+    color: "#e8f0ff",
+    ink: "#1c1c1c"
+  },
+  {
     name: "앵파크",
     url: "https://anglog.nobody-asked.dev/",
     thumb: "assets/angpark.jpg",
